@@ -132,4 +132,27 @@ class Home extends Aries {
         $this->view("home/setting",$data);
         $this->view("tmp/footer");
     }
+    public function Editprofile(){
+        $data["title"] = "Ariestech | Filemanager";
+        $data["user"] = $this->model("Auth_model")->is_login();
+        $this->library("Form_validation");
+        $this->lib->set_rule("username","Username",["trim","required","min_length"=>3]);
+        $this->lib->set_rule("password","Password",["trim","required","min_length"=>8,"password_hash"]);
+        if ($this->lib->run() == false) {
+            $this->redirect("Home/Setting");
+        }
+        $input = ["username"=>$this->lib->get_value("username"),"password"=>$this->lib->get_value("password")];
+        $where = ["id" =>$data["user"]["id"]];
+        
+        if ($this->db->update("user",$input,$where) < 1) {
+            Flasher::set("Edit profile failed","Error","danger");
+            $this->redirect("Home");
+        }
+        $user = ["username"=>$input["username"]];
+        
+        $this->session("user",$user);
+            
+        $this->redirect("Home");
+        
+    }
 }
