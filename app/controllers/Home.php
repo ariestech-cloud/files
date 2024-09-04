@@ -13,7 +13,7 @@ class Home extends Aries {
         
         $data["items"] = $this->model("Model")->scanedir($data["dir_path"]);
         $data["title"] = "Ariestech | Filemanager";
-        
+        $data["user"] = $this->model("Auth_model")->is_login();
         $this->view("tmp/header",$data);
         $this->view("tmp/navbar",$data);
         $this->view("home/index",$data);
@@ -62,7 +62,7 @@ class Home extends Aries {
         $hex = explode("/",$u);
         $data["filename"] = end($hex);
         $data["path"] = $u;
-        
+        $data["user"] = $this->model("Auth_model")->is_login();
         $i = count($hex)-1;
         unset($hex[$i]);
         
