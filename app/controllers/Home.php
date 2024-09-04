@@ -124,7 +124,7 @@ class Home extends Aries {
         
         $this->view("home/ajax",$data);
     }
-    public function Setting{
+    public function Setting(){
         $data["title"] = "Ariestech | Filemanager";
         $data["user"] = $this->model("Auth_model")->is_login();
         $this->view("tmp/header",$data);
