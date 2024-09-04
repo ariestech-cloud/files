@@ -1,2 +1,2 @@
 Files Ariestech
-Setting cinfiguration in app/config.php
+Setting configuration in app/config.php
