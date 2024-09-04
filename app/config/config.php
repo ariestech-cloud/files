@@ -1,16 +1,13 @@
 <?php
 class config{
     public $base_url = "http://files.ariestech.cloud/public/";
-    public $user = [
-        "admin" => ""
-        ];
     public $default_controller = "Home";
     public $default_method = "Index";
     public $database = [
         "host" => "ariestech.cloud",
         "user" => "root",
         "password" => "alfin22111478",
-        "database" => ""
+        "database" => "files"
         ];
     public $dir_path = "/var/www/";
 }
