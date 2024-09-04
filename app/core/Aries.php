@@ -22,11 +22,7 @@ class Aries {
     }
     public function library($lib,$data = ""){
         require_once("../app/library/".$lib.".php");
-        if (empty($data)) {
-           $this->lib = new $lib;
-        }else{
-           $this->lib = new $lib($data);
-        }
+        $this->lib = new $lib($data);
     }
     public function session($name,$data){
         $_SESSION[$name] = $data;
