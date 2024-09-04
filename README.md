@@ -1,2 +1,2 @@
-Files Ariestech
-Setting configuration in app/config.php
+-Files Ariestech-
+-Setting configuration in files/app/config.php-
