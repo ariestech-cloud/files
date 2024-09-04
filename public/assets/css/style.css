@@ -16,4 +16,49 @@
     .header{
         background-color: white;
     }
+        .textarea-container {
+            position: relative;
+            width: 100%;
+            color : #fff;
+            height: 300px;
+            
+        }
 
+        .line-numbers {
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 15px;
+            
+            overflow: auto;
+            background-color: #000E23;
+            text-align: right;
+            padding: 10px;
+            border-right: 1px solid #fff;
+            user-select: none;
+        }
+
+        .line-numbers span {
+            display: block;
+            font-size: 14px;
+            height: 18px; /* Sesuaikan dengan tinggi baris textarea */
+        }
+
+        .textarea-container textarea {
+            color: #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 50px;
+            background-color: #000E23;
+            font-family: monospace;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            resize: none;
+            line-height: 20.5px; /* Sesuaikan dengan tinggi baris */
+            font-size: 14px;
+            outline: none;
+        }
