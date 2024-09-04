@@ -16,3 +16,9 @@
     .header{
         background-color: white;
     }
+    .CodeMirror {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 400px;
+            font-size: 14px;
+    }
