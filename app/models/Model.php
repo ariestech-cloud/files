@@ -288,6 +288,7 @@ class Model extends Aries{
     public function unzip($data,$dir){
         $path = $data["path"];
         $item = $data["item"];
+        var_dump($data);die;
         $zip = new ZipArchive;
 $res = $zip->open($path.$item);
 if ($res === TRUE) {
