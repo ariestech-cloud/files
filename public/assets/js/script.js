@@ -1,3 +1,13 @@
+const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+            lineNumbers: true,
+            mode: 'application/x-httpd-php',
+            theme: 'dracula',
+            matchBrackets: true,
+            lineWrapping: true,  // Enable word wrap
+            extraKeys: {
+                'Ctrl-Space': 'autocomplete'
+            }
+        });
 $(document).ready(function() {
   $('#dataTable').DataTable();
 });
