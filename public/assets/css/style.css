@@ -1,0 +1,18 @@
+    .brand { font-family : "Matemasie";}
+	.list-inline li {
+        display : inline-block;
+        margin-left :20px;
+        width : 2em;
+        height : 2em;  
+        border-radius :10px;
+        background-color: white;
+        padding : 0.4em 0;
+    }
+    .sosial-icon {
+        font-size : 1.15em;
+        backgorund-color: #fff
+        color: #f8f9fa;
+    }
+    .header{
+        background-color: white;
+    }
