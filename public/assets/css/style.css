@@ -20,7 +20,7 @@
             position: relative;
             width: 100%;
             color : #fff;
-            height: 300px;
+            height: 600px;
             
         }
 
@@ -30,11 +30,11 @@
             top: 0;
             left: 0;
             bottom: 0;
-            width: 15px;
+            width: 50px;
             
             overflow: auto;
             background-color: #000E23;
-            text-align: right;
+            text-align: center;
             padding: 10px;
             border-right: 1px solid #fff;
             user-select: none;
@@ -43,7 +43,8 @@
         .line-numbers span {
             display: block;
             font-size: 14px;
-            height: 18px; /* Sesuaikan dengan tinggi baris textarea */
+            border-bottom: 1px solid #fff;
+            height: 17px; /* Sesuaikan dengan tinggi baris textarea */
         }
 
         .textarea-container textarea {
