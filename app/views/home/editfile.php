@@ -13,9 +13,7 @@
             
         </div>
         <div class="card-body">
-            <div class="form-group">
-                <textarea name="text_file" id="" cols="30" rows="50" class="form-control"><?=$data["code"];?></textarea>
-            </div>
+                <textarea id="code"></textarea>
         </div>
         </form>
     </div>
