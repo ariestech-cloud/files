@@ -2,6 +2,18 @@ function base_url(url = ""){
     let base = "http://files.ariestech.cloud/public/";
     return base+url;
 }
+function updateLineNumbers() {
+            const textarea = document.getElementById('textarea');
+            const lineNumbers = document.getElementById('line-numbers');
+            const lines = textarea.value.split('\n').length;
+            lineNumbers.innerHTML = Array.from({length: lines}, (_, i) => `<span>${i + 1}</span>`).join('');
+        }
+
+        function syncScroll() {
+            const textarea = document.getElementById('textarea');
+            const lineNumbers = document.getElementById('line-numbers');
+            lineNumbers.scrollTop = textarea.scrollTop;
+        }
 function add(){
     $("#ModalLabel").html("New Item");
     let path_dir = $("#path_dir").val();
