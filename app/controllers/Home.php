@@ -49,7 +49,7 @@ class Home extends Aries {
             }
         if (isset($_POST["upload"])) {
             
-            $this->model("Model")->upload($_POST);
+            $this->model("Model")->upload($_POST,$dir);
             }
  if (isset($_POST["unzip"])) {
             
