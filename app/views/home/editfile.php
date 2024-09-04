@@ -15,7 +15,7 @@
         <div class="card-body">
                     <div class="textarea-container">
         <div class="line-numbers" id="line-numbers"></div>
-        <textarea id="textarea" oninput="updateLineNumbers()" onscroll="syncScroll()"></textarea>
+        <textarea name="text_file" id="textarea" oninput="updateLineNumbers()" onscroll="syncScroll()"><?=$data["code"];?></textarea>
     </div>
         </div>
         </form>
