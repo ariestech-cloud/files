@@ -13,7 +13,10 @@
             
         </div>
         <div class="card-body">
-                <textarea id="code"></textarea>
+                    <div class="textarea-container">
+        <div class="line-numbers" id="line-numbers"></div>
+        <textarea id="textarea" oninput="updateLineNumbers()" onscroll="syncScroll()"></textarea>
+    </div>
         </div>
         </form>
     </div>
