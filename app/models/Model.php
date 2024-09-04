@@ -301,43 +301,19 @@ $this->redirect("Home/Index/".$dir);
 $this->redirect("Home/Index/".$dir);
 }
     }
-    public function zip($path){
-$zip = new ZipArchive();
-$filename = "./test112.zip";
-
-if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
-    exit("cannot open <$filename>\n");
-}
-    $zip->addEmptyDir("arspay");
-
-$zip->close();
+public function zip($the_folder){
+    $zip_file_name = $the_folder.".zip";
+    $this->library("Zip");
+    if($this->lib->open($zip_file_name, ZipArchive::CREATE) !== true){
+        
     }
-    public function createZip($zipArchive, $folder)
-{
-    if (is_dir($folder)) {
-        if ($f = opendir($folder)) {
-            while (($file = readdir($f)) !== false) {
-                if (is_file($folder . $file)) {
-                    if ($file != '' && $file != '.' && $file != '..') {
-                        $zipArchive->addFile($folder.$file);
-                    }
-                } else {
-                    if (is_dir($folder . $file)) {
-                        if ($file != '' && $file != '.' && $file != '..') {
-                            $zipArchive->addEmptyDir($file);
-                            $folder = $folder . $file . '/';
-                            $this->createZip($zipArchive, $folder);
-                        }
-                    }
-                }
-            }
-            closedir($f);
-        } else {
-            exit("Unable to open directory " . $folder);
-        }
-    } else {
-        exit($folder . " is not a directory.");
+    if (is_dir($the_folder)) {
+        $this->lib->addDir($the_folder);
+        
+    }else{
+        $this->lib->addFile($the_folder,basename($the_folder));
     }
+    $this->lib->close();   
 }
     public function copydir($path_from,$item,$path_to) {
         $dir = $item;
