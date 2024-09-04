@@ -41,7 +41,7 @@ class App{
             return $url;
         }
 	else{
-	return [$this->controller,$this->method];
+	return ["Error","404"];
 	}
     }
 }
