@@ -1,7 +1,3 @@
-function base_url(url){
-    let base_url = "files.ariestech.cloud/public/";
-    return base_url+url;
-}
 $(document).ready(function() {
   $('#dataTable').DataTable();
 });
@@ -57,6 +53,3 @@ download($(this));
     // code block
 }
 });
-
-
-    
