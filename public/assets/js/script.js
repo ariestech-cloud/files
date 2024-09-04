@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
   $('#dataTable').DataTable();
+  updateLineNumbers();
 });
 $('#checkin').change(function() {
     // this will contain a reference to the checkbox   
