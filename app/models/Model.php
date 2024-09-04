@@ -279,7 +279,7 @@ class Model extends Aries{
                 $this->redirect("Home/Index/".$dir);
             }
             $tmp = $files["tmp_name"][$key];
-            move_uploaded_file($tmp,$path.$item);
+            move_uploaded_file($tmp,$path.$value);
             Flasher::set("Upload file success","Upload file successfuly","success");
                 $this->redirect("Home/Index/".$dir);
         }
