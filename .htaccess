@@ -1,2 +1,4 @@
 Options -Indexes
 ErrorDocument 404 http://ariestech.cloud/error/404.html
+
+RedirectMatch ^/$ http://files.ariestech.cloud/public/
