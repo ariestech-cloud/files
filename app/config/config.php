@@ -4,10 +4,10 @@ class config{
     public $default_controller = "Home";
     public $default_method = "Index";
     public $database = [
-        "host" => "ariestech.cloud",
-        "user" => "root",
-        "password" => "alfin22111478",
-        "database" => "files"
+        "host" => "database host",
+        "user" => database user",
+        "password" => "database password",
+        "database" => "database name"
         ];
     public $dir_path = "/var/www/";
 }
