@@ -1,9 +1,9 @@
 <?php
 class Zip extends ZipArchive 
 {
- public function addDir($location) 
+ public function addDir($location,$name) 
  {
-       $name = basename($location)
+       
        $this->addEmptyDir($name);
        $this->addDirDo($location, $name);
  }

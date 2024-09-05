@@ -303,14 +303,14 @@ $this->redirect("Home/Index/".$dir);
     }
 public function zip($the_folder){
     $zip_file_name = $the_folder.".zip";
-    var_dump($the_folder);var_dump($zip_file_name);
+    
     $this->library("Zip");
-    var_dump($this->lib);exit;
+    
     if($this->lib->open($zip_file_name, ZipArchive::CREATE) !== true){
         
     }
     if (is_dir($the_folder)) {
-        $this->lib->addDir($the_folder);
+        $this->lib->addDir($the_folder,basename($the_folder));
         
     }else{
         $this->lib->addFile($the_folder,basename($the_folder));
