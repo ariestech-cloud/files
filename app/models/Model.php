@@ -301,8 +301,26 @@ $this->redirect("Home/Index/".$dir);
 $this->redirect("Home/Index/".$dir);
 }
     }
-public function zip($the_folder){
-    $zip_file_name = $the_folder.".zip";
+public function download_checked($data){
+        $path = $data["path"];
+        $items = $data["items"];
+        $items = explode(",",$items);
+	$filezip = $path."download.zip";
+        foreach ($items as $item){
+            $this->zip($path.$item,$filezip);
+         
+            
+        }
+        
+        
+        $this->redirect("Home/Download/".urlencode(base64_encode($filezip)));
+    }
+public function zip($the_folder,$file = ""){
+    if(empty($file)){
+	$zip_file_name = $the_folder.".zip";
+    }else{
+    	$zip_file_name = $file;
+    }
     
     $this->library("Zip");
     

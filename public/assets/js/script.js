@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   $('#dataTable').DataTable();
   updateLineNumbers();
@@ -50,6 +49,9 @@ unzip($(this));
     break;
     case "download":
 download($(this));
+    break;
+case "download_checked":
+download_checked($(this));
     break;
   default:
     // code block

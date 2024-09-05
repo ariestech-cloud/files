@@ -108,7 +108,7 @@
 <button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="del_checked"><i class="fas fa-trash-alt"></i></button>
 <button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="copy_checked"><i class="fas fa-copy"></i></button>
 <button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="move_checked"><i class="fas fa-folder-open"></i></button>
-<button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="download-all"><i class="fas fa-file-download"></i></button>
+<button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="download_checked"><i class="fas fa-file-download"></i></button>
 <button type="button" class="btn btn-outline-primary me-1 btn-action" data-bs-toggle="modal" data-bs-target="#ActionModal" data-action="upload"><i class="fas fa-file-upload"></i></button>
     </div>
 </section>

@@ -267,3 +267,29 @@ function send(url,html,data = {}){
     html.html(data);
   });
 }
+function download_checked(i){
+    let path_dir = $("#path_dir").val();
+    $("#ModalLabel").html("Download Item");
+    let val = [];
+    $('.input-check:checked').each(function(i){
+          val[i] = $(this).val();
+        });
+    if(val.length > 0){
+        let html = `
+<div class="form-group mt-2">
+    <input type="hidden" class="form-control" name="path" value="`+path_dir+`">
+    <input type="hidden" class="form-control" name="items" value="`+val+`">
+    <p>Are you sure you want to download this item?</p>
+</div>`;
+        $(".modal-body").html(html);
+        $(".modal-footer").html(`
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name="download_checked">Save changes</button>
+        `);
+    }else{
+        $(".modal-body").html("<p>Please select an item</p>");
+        $(".modal-footer").html(`
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        `);
+    }
+}

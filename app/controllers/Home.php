@@ -55,6 +55,10 @@ class Home extends Aries {
             
             $this->model("Model")->unzip($_POST,$dir);
             }
+if (isset($_POST["download_checked"])) {
+
+            $this->model("Model")->download_checked($_POST);
+            }
     }
     public function Fileview($u){
         $u = urldecode(base64_decode($u));
