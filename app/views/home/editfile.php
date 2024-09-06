@@ -13,11 +13,8 @@
             
         </div>
         <div class="card-body">
-                    <div class="textarea-container">
-        <div class="line-numbers" id="line-numbers"></div>
-        <textarea name="text_file" id="textarea" oninput="updateLineNumbers()" onscroll="syncScroll()"><?=$data["code"];?></textarea>
-    </div>
-        </div>
+        <?=$this->model("Model")->file_view($data["path"],$data["code"]);?>
+              
         </form>
     </div>
 </sectiion>

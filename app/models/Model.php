@@ -21,6 +21,69 @@ class Model extends Aries{
             return $this->file_icon($i);
         }
     }
+    public function file_view($i,$content){
+        var_dump($i);
+            $files = [
+            "word" => '<span class="badge text-bg-primary">
+                <i class="fas fa-file-word"></i>
+                </span>',
+            "excel" => '<span class="badge text-bg-primary">
+                <i class="fab fa-file-excel"></i>
+                </span>',
+            "pptx" => '<span class="badge text-bg-primary">
+                <i class="fab fa-file-powerpoint"></i>
+                </span>',
+            "pdf" => '<span class="badge text-bg-primary ">
+                <i class="fas fa-file-pdf"></i>
+                </span>',
+            "music" => '<span class="badge text-bg-primary">
+                <i class="fas fa-file-audio"></i>
+                </span>',
+            "video" => '<span class="badge text-bg-primary">
+                <i class="fas fa-file-video"></i>
+                </span>',
+            "image" => '<img src="'.$i.'" class="img-fluid rounded" alt="'.basename($i).'">',
+
+            "default" => '<div class="textarea-container">
+        <div class="line-numbers" id="line-numbers"></div>
+        <textarea name="text_file" id="textarea" oninput="updateLineNumbers()" onscroll="syncScroll()">'.$content.'</textarea>
+    </div>
+        </div>'
+            ];
+        
+        $music = ["mp3"];
+        $image = ["jpg","jpeg","png","gif","tiff"
+            ];
+        $video = ["mp4","mkv"];
+        $word = ["doc",'docx'];
+        $excel = ["xls",'xlsx'];
+        $f = pathinfo($i,PATHINFO_EXTENSION);
+        $f = strtolower($f);
+        switch ($f) {
+            case in_array($f,$music):
+                $f = "music";
+                break;
+            case in_array($f,$video):
+                $f = "video";
+                break;
+            case in_array($f,$image):
+                $f = "image";
+                break;
+                case in_array($f,$word):
+                $f = "word";
+                break;
+            case in_array($f,$excel):
+                $f = "excel";
+                break;
+            case array_key_exists($f,$files):
+                $f = $f;
+                break;
+            default:
+                $f = "default";
+                break;
+        }
+        return $files[$f];
+    }
     public function file_icon($i){
         $files = [
             "php" => '<span class="badge text-bg-primary ">
