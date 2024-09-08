@@ -1,5 +1,5 @@
 function base_url(url = ""){
-    let base = "http://files.ariestech.cloud/public/";
+    let base = "https://files.ariestech.cloud/public/";
     return base+url;
 }
 function updateLineNumbers() {

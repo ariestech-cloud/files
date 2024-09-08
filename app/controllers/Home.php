@@ -99,7 +99,8 @@ if (isset($_POST["download_checked"])) {
             $u = urlencode(base64_encode($u));
             Flasher::set("Save changes","File changed successfully","success");
             $this->redirect("Home/Fileview/".$u);
-        }
+        
+	}
         
     }
     public function Download($path){

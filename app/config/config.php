@@ -1,11 +1,11 @@
 <?php
 class config{
-    public $base_url = "http://files.ariestech.cloud/public/";
+    public $base_url = "https://files.ariestech.cloud/public/";
     public $default_controller = "Home";
     public $default_method = "Index";
     public $database = [
-        "host" => "ariestech.cloud",
-        "user" => "aries_silver",
+        "host" => "ariestech.cloud:3306",
+        "user" => "root",
         "password" => "alfin22111478",
         "database" => "files"
         ];
